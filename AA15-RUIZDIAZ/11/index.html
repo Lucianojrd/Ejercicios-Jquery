@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        Todo es importante
+    </header>
+    <main>
+        <h1>Si supiera volar</h1>
+        <h2> <strong> Seria un superheroe</strong></h2>
+        <p> kadadakfeineiifeojfiojefeiojioejfioefiejfioefjjeiefejfjikve</p>
+        <p><strong> Y ademas tambien me gustaria volar y saltar muy alto</strong></p>
+    </main>
+    <button id="ocultar">Ocultar palabras con strong</button>
+	<button id="mostrar">Mostrar palabras con strong</button>
+</body>
+<script>
+    let x = $(document);
+    x.ready(iniciarContenido);
+
+    function iniciarContenido() {
+        let x = $("#mostrar");
+        x.click(mostrarStrong);
+        x = $("#ocultar");
+        x.click(ocultarStrong);
+    }
+
+    function mostrarStrong() {
+        let x = $("strong");
+        x.show()
+    }
+
+    function ocultarStrong() {
+        let x = $("strong");
+        x.hide();
+    }
+</script>
+</html>

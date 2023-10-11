@@ -1,0 +1,20 @@
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="lista"></div>
+    <script>
+        var lista = $("<ol></ol>"); 
+        var elementos = ["A", "B", "C", "D"]; 
+        for (var i = 0; i < elementos.length; i++) {
+            var li = $("<li></li>");
+            li.text(elementos[i]); 
+            lista.append(li);
+        }
+        var presentado = lista.find("li:contains ('C')"); 
+        presentado.hide(); 
+        $("#lista").append(lista);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio7</title>
+</head>
+
+<body>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <button onclick="mostrarSaludo()">Mostrar saludo</button>
+    <p id="saludo"></p>
+
+    <script>
+        function mostrarSaludo() {
+            var nombre = $("#nombre").val();
+            var saludo = $("#saludo");
+            saludo.text("Hola, " + nombre);
+        }
+    </script>
+</body>
+
+</html>

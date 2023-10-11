@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prueba de jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    p {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <p id="parrafo1">Este es el primer párrafo.</p>
+  <p id="parrafo2">Este es el segundo párrafo.</p>
+
+  <script>
+    $(document).ready(function() {
+      $("#parrafo1").click(function() {
+        $(this).css("color", "red");
+      });
+      $("#parrafo2").click(function() {
+        $(this).css("color", "blue");
+      });
+    });
+  </script>
+</body>
+</html>

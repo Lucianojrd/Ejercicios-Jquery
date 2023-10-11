@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="header">
+        <h3>Las fotografias son lo mejor del mundo </h3>
+    </header>
+    <nav id="navegacion">
+        <div>
+            <h2>
+                <a href="#"></a> Inicio
+            </h2>
+        </div>
+        <div>
+            <h2>
+                <a href="#"></a>Galeria
+            </h2>
+        </div>
+    </nav>
+    
+    <button id="mostrar_header" value="verheader">Ver header</button>
+    <button id="mostrar_cuerpo" value="vercuerpo">Ver cuerpo </button>
+</body>
+<script>
+
+    let x = $(document);
+    x.ready(iniciarContenido);
+
+    function iniciarContenido() {
+        let x = $("#mostrar_header");
+        x.click(mostrarHeader);
+        x = $("#mostrar_cuerpo");
+        x.click(mostrarContenido);
+    }
+
+    function mostrarHeader() {
+        let x = $("#header");
+        alert(x.html());
+    }
+
+    function mostrarContenido() {
+        let x = $("#navegacion");
+        alert(x.html());
+    }
+</script>
+
+</html>

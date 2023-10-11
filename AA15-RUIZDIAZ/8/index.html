@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio8</title>
+</head>
+
+<body>
+    <a id="enlace">Texto sin enlace</a>
+
+    <button class="uno">Google</button>
+    <button class="dos">Wikipedia</button>
+    <button class="tres">Sin enlace</button>
+
+    <script>
+        var enlace = $("#enlace");
+
+        enlace.attr("href", "");
+
+        var botonUno = $(".uno");
+        var botonDos = $(".dos");
+        var botonTres = $(".tres");
+
+        botonUno.on("click", function () {
+            enlace.attr("href", "https://www.google.com");
+            enlace.text("Google");
+        });
+
+        botonDos.on("click", function () {
+            enlace.attr("href", "https://www.wikipedia.org");
+            enlace.text("Wikipedia");
+        });
+
+        botonTres.on("click", function () {
+            enlace.removeAttr("href");
+            enlace.text("Sin enlace");
+        });
+
+    </script>
+</body>
+
+</html>

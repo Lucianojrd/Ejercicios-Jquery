@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista no ordenada con elementos ocultos</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    li {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li id="elemento1">Elemento 1</li>
+    <li id="elemento2">Elemento 2</li>
+    <li id="elemento3">Elemento 3</li>
+    <li id="elemento4">Elemento 4</li>
+  </ul>
+
+  <script>
+    $(document).ready(function() {
+      $("li").click(function() {
+        $(this).hide();
+      });
+    });
+  </script>
+</body>
+</html>

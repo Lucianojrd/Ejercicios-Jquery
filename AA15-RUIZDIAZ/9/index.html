@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="tabla">
+        <tr class="encabezado">
+            <th>Encabezado de la columna 1</th>
+            <th>Encabezado de la columna 2</th>
+            <th>Encabezado de la columna 3</th>
+        </tr>
+        <tr class="fila1">
+            <td>Fila 1, columna 1</td>
+            <td>Fila 1, columna 2</td>
+            <td>Fila 1, columna 3</td>
+        </tr>
+        <tr class="fila2">
+            <td>Fila 2, columna 1</td>
+            <td>Fila 2, columna 2</td>
+            <td>Fila 2, columna 3</td>
+        </tr>
+    </table>
+
+    <button id="estilos_turn_on">Agregar estilo</button>
+    <button id="estilos_turn_off">Quitar estilos</button>
+    <script>
+
+        let x = $(document);
+        x.ready(iniciarEstilos);
+
+        function iniciarEstilos() {
+            let x = $("#estilos_turn_on");
+            x.click(asociarClase);
+            x = $("#estilos_turn_off");
+            x.click(desasociarClase);
+        }
+
+        function asociarClase() {
+            let x = $("#tabla");
+            x.addClass("recuadro");
+        }
+
+        function desasociarClase() {
+            let x = $("#tabla");
+            x.removeClass("recuadro");
+        }
+    </script>
+</body>
+
+</html>

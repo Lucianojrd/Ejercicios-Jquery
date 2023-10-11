@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="height: 200px; width: 200px ; border:solid 5px; padding: 50px;">
+        <h1>Hola como estas</h1>
+        <p>Yo muy bien</p>
+        <h2></h2>
+    </div>
+
+</body>
+<script>
+    let x = $(document);
+    x.ready(inicializarEventos);
+
+    function inicializarEventos() {
+        let x = $("div");
+        x.mousemove(moverDentro);
+        x.mouseout(moverFuera)
+    }
+
+    function moverDentro(event) {
+        let x = $("h2");
+        x.text("Valor eje x: " + event.clientX + " Valor eje y: "+ event.clientY);
+    }
+    function moverFuera(event) {
+        let x= $("h2");
+        x.text("Estas fuera del div");
+    }
+</script>
+
+</html>
